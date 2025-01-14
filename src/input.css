@@ -24,3 +24,7 @@
 .main__p{
     @apply text-white text-base;
 }
+
+.bg-gradiented{
+    @apply bg-gradient-to-bl from-main via-main to-[#643E72];
+}
