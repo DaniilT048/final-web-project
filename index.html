@@ -7,7 +7,7 @@
 </head>
 <body>
 <header class="bg-main md:p-14 lg:grid lg:grid-cols-2 lg:grid-rows-2">
-    <div class="bg-soft md:bg-main flex justify-between md:justify-start text-white py-3.5 lg:col-start-2 lg:self-end lg:justify-self-end">
+    <div class="bg-soft md:bg-main flex justify-between md:justify-start text-nowrap text-white p-3.5 lg:col-start-2 lg:self-end lg:justify-self-end">
         <ol class="flex gap-x-2.5 uppercase font-bold">
             <li><a href="#">ук</a></li>
             <li><a href="#">ру</a></li>
@@ -19,16 +19,25 @@
     </div>
         <div class="flex justify-between p-3.5 lg:row-span-2 lg:col-start-1 lg:row-start-1 ">
             <img class="w-44 h-14 md:w-80 md:h-16" src="assets/images/header/logo.svg" alt="logo">
-        <button>
-            <img class="w-8 h-8 md:hidden" src="assets/images/header/hamburger.svg" alt="">
-        </button>
+            <div class="relative">
+                <button class="peer">
+                    <img class="w-8 h-8 md:hidden cursor-pointer" src="assets/images/header/hamburger.svg" alt="Menu">
+                </button>
+                <ol class="hidden peer-focus:flex absolute right-0 top-1/2 -translate-y-1/2 bg-main text-nowrap text-sm text-white flex-row gap-4 px-4 py-2 rounded-md shadow-lg md:hidden">
+                    <li><a href="#" class="hover:text-accent">about us</a></li>
+                    <li class="text-accent border-b-2 border-accent"><a href="#">services</a></li>
+                    <li><a href="#" class="hover:text-accent">team</a></li>
+                    <li><a href="#" class="hover:text-accent">publications</a></li>
+                    <li><a href="#" class="hover:text-accent">contact</a></li>
+                </ol>
+            </div>
         </div>
         <ol class="hidden md:flex justify-start gap-x-4 text-white font-bold p-3.5 lg:self-end lg:justify-self-end">
-            <li><a href="#">about us</a></li>
-            <li class="text-accent border-b-2 border-accent"><a href="#">services</a></li>
-            <li><a href="#">team</a></li>
-            <li><a href="#">publications</a></li>
-            <li><a href="#">contact</a></li>
+            <li class="hover:text-accent"><a href="#">about us</a></li>
+            <li class="text-accent border-b-2 hover:text-accent border-accent"><a href="#">services</a></li>
+            <li class="hover:text-accent"><a href="#">team</a></li>
+            <li class="hover:text-accent"><a href="#">publications</a></li>
+            <li class="hover:text-accent"><a href="#">contact</a></li>
         </ol>
     </header>
     <main class="bg-gradiented md:p-14 p-3.5 mb-14">
